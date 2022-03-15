@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: jumpStrength
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1294212226797978761, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
       propertyPath: m_Name
       value: Mario
