@@ -273,9 +273,33 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: climbSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59da52c3011e86441a5b1acf0fa9fecc, type: 3}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
       propertyPath: jumpStrength
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: runSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: runSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 848bb8cdc4c5fb74b8d4d2e74523cc87, type: 3}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: runSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f53830d22153935409a8d3f95e6b1567, type: 3}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: runSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 848bb8cdc4c5fb74b8d4d2e74523cc87, type: 3}
+    - target: {fileID: -4516340870767547960, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
+      propertyPath: runSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e94419a6fec8e54aba402d2bf693480, type: 3}
     - target: {fileID: 1294212226797978761, guid: bc99a910dd101244099adb6d33bdc0c8, type: 3}
       propertyPath: m_Name
       value: Mario

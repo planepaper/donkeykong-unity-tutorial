@@ -2,10 +2,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] runSprites;
+    public Sprite climbSprite;
+    private int spriteIndex;
+
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider;
+
     private Collider2D[] _results;
     private Vector2 _direction;
+
     public float moveSpeed = 1f;
     public float jumpStrength = 1f;
     private bool grounded;
@@ -13,9 +20,15 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
         _results = new Collider2D[4];
+    }
+
+    private void OnEnable()
+    {
+        InvokeRepeating(nameof(AnimateSprite), 1f / 12f, 1f / 12f);
     }
 
     private async void CheckCollision()
@@ -82,5 +95,24 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         _rigidbody2D.MovePosition(_rigidbody2D.position + _direction * Time.fixedDeltaTime);
+    }
+
+    private void AnimateSprite()
+    {
+        if (climbing)
+        {
+            spriteRenderer.sprite = climbSprite;
+        }
+        else
+        {
+            spriteIndex++;
+
+            if (spriteIndex >= runSprites.Length)
+            {
+                spriteIndex = 0;
+            }
+
+            spriteRenderer.sprite = runSprites[spriteIndex];
+        }
     }
 }
