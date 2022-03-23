@@ -115,4 +115,19 @@ public class Player : MonoBehaviour
             spriteRenderer.sprite = runSprites[spriteIndex];
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Objective"))
+        {
+            enabled = false;
+            //expensive function
+            FindObjectOfType<GameController>().LevelComplete();
+        }
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            enabled = false;
+            FindObjectOfType<GameController>().LevelFailed();
+        }
+    }
 }
